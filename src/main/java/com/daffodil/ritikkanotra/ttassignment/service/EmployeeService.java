@@ -11,4 +11,6 @@ public interface EmployeeService {
 
     public List<Employee> fetchEmployeesList();
 
+    public Employee fetchEmployeeByEmployeeCode(String employeeCode);
+
 }

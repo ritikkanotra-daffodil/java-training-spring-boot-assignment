@@ -22,4 +22,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     public List<Employee> fetchEmployeesList() {
         return employeeRepository.findAll();
     }
+
+    @Override
+    public Employee fetchEmployeeByEmployeeCode(String employeeCode) {
+        return employeeRepository.findByEmployeeCode(employeeCode);
+    }
 }

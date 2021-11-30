@@ -3,10 +3,7 @@ package com.daffodil.ritikkanotra.ttassignment.controller;
 import com.daffodil.ritikkanotra.ttassignment.entity.Employee;
 import com.daffodil.ritikkanotra.ttassignment.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,6 +21,13 @@ public class EmployeeController {
     @GetMapping("/employees")
     public List<Employee> fetchEmployeesList() {
         return employeeService.fetchEmployeesList();
+    }
+
+    @GetMapping("/employees/code/{employeeCode}")
+    public Employee fetchEmployeeByEmployeeCode(@PathVariable("employeeCode") String employeeCode) {
+
+        return employeeService.fetchEmployeeByEmployeeCode(employeeCode);
+
     }
 
 }
