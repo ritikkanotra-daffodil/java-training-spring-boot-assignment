@@ -15,4 +15,7 @@ public interface EmployeeService {
     public Employee fetchEmployeeByEmployeeCode(String employeeCode) throws EmployeeNotFoundException;
 
     public void removeEmployeeByEmployeeCode(String employeeCode) throws EmployeeNotFoundException;
+
+    public Employee updateEmployeeByEmployeeCode(String employeeCode, Employee employee) throws EmployeeNotFoundException;
+
 }

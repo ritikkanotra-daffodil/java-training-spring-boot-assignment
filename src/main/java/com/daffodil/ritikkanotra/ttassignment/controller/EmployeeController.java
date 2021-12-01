@@ -37,6 +37,15 @@ public class EmployeeController {
         return "Removed " + employeeCode + " successfully.";
     }
 
+    @PutMapping("/employees/code/{employeeCode}")
+    public Employee updateEmployeeByEmployeeCode(
+            @PathVariable("employeeCode") String employeeCode,
+            @RequestBody Employee employee) throws EmployeeNotFoundException {
+
+        return employeeService.updateEmployeeByEmployeeCode(employeeCode, employee);
+
+    }
+
 
 
 }
