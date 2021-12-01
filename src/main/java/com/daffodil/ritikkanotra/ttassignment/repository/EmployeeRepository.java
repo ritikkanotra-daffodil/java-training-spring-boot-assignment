@@ -13,6 +13,4 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
     public void deleteByEmployeeCode(String employeeCode);
 
-    public boolean existsByEmployeeCode(String employeeCode);
-
 }
