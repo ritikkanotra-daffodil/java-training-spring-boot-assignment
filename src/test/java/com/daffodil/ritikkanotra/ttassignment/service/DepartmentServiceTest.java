@@ -94,11 +94,7 @@ class DepartmentServiceTest {
     @DisplayName("Check if new employee is created as expected")
     public void checkIfEmployeeIsCreatedCorrectly() {
         Employee createdEmployee = employeeService.saveEmployee(theEmployee);
-        assertEquals(theEmployee.getEmployeeCode(), createdEmployee.getEmployeeCode());
-        assertEquals(theEmployee.getEmployeeName(), createdEmployee.getEmployeeName());
-        assertEquals(theEmployee.getEmployeeDepartment(), createdEmployee.getEmployeeDepartment());
-        assertEquals(theEmployee.getEmployeeEmail(), createdEmployee.getEmployeeEmail());
-        assertEquals(theEmployee.getEmployeeDesignation(), createdEmployee.getEmployeeDesignation());
+        assertEquals(theEmployee, createdEmployee);
     }
 
     @Test
