@@ -18,7 +18,7 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-class DepartmentServiceTest {
+class EmployeeServiceTest {
 
     @Autowired
     private EmployeeService employeeService;
